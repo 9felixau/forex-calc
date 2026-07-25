@@ -13,3 +13,4 @@ def convert(amount, from_curr, to_curr):
         raise ValueError("Unsupported currency")
     # Convert to base USD first, then to target
     amount_usd = amount / RATES[from_curr]
+    return amount_usd * RATES[to_curr]
