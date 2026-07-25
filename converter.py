@@ -10,3 +10,6 @@ RATES = {
 
 def convert(amount, from_curr, to_curr):
     if from_curr not in RATES or to_curr not in RATES:
+        raise ValueError("Unsupported currency")
+    # Convert to base USD first, then to target
+    amount_usd = amount / RATES[from_curr]
