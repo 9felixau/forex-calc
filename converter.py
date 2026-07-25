@@ -7,3 +7,6 @@ RATES = {
     "INR": 83.5,
     "JPY": 158.2
 }
+
+def convert(amount, from_curr, to_curr):
+    if from_curr not in RATES or to_curr not in RATES:
