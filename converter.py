@@ -14,3 +14,7 @@ def convert(amount, from_curr, to_curr):
     # Convert to base USD first, then to target
     amount_usd = amount / RATES[from_curr]
     return amount_usd * RATES[to_curr]
+
+if __name__ == "__main__":
+    print("100 USD to EUR:", convert(100, "USD", "EUR"))
+    print("50 GBP to INR:", convert(50, "GBP", "INR"))
